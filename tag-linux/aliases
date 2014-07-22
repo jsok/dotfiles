@@ -1,0 +1,23 @@
+# Aliases
+
+alias tmux="tmux -2"
+alias l="ls -G --color"
+alias rm="rm"
+alias mv="mv -i"
+alias cp="cp -i"
+alias ls="ls --color -lG"
+alias ll="ls --color -lG"
+alias la="ls --color -AG"
+alias lll="ls --color -lhGA"
+alias vi="vim"
+alias cls="echo -ne '\033c'"
+alias cdd="cd ../"
+alias usage="du -h -d 1"
+alias exifstripgps="exiftool -overwrite_original -Geotag="
+
+# Common typos
+alias grpe="grep"
+alias gis="git status"
+alias gid="git diff"
+alias gib="git branch"
+alias gic="git commit -m"
