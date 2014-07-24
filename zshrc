@@ -4,6 +4,8 @@
 # 2007 onwards Jonathan Sokolowski
 #
 
+export ZSH=$HOME/.zsh
+
 # awesome cd movements from zshkit
 setopt autocd autopushd pushdminus pushdsilent pushdtohome cdablevars
 DIRSTACKSIZE=5
@@ -16,15 +18,6 @@ unsetopt nomatch
 
 umask 022
 limit coredumpsize 0
-
-git_prompt_info() {
-  ref=$(git symbolic-ref HEAD 2> /dev/null)
-  if [[ -n $ref ]]; then
-    echo " %{$fg_bold[green]%}${ref#refs/heads/}%{$reset_color%}"
-  fi
-}
-setopt promptsubst
-export PS1='${SSH_CONNECTION+"%{$fg_bold[green]%}%n@%M:"}%{$fg_bold[blue]%}%n@%M%{$reset_color%}$(git_prompt_info) %~> '
 
 export VISUAL=vim
 export EDITOR=$VISUAL
@@ -75,6 +68,7 @@ setopt LONG_LIST_JOBS
 setopt NO_HUP
 setopt RC_QUOTES
 
+#
 # History
 
 export HISTFILE="${HOME}/.zhistory"
@@ -111,12 +105,35 @@ bindkey '\e\e[C' forward-word
 # load our own completion functions
 fpath=(~/.zsh/completion/zsh-users/src $fpath)
 
-# load custom executable functions
-for function in ~/.zsh/functions/*; do
-  source $function
+#
+# Ad-hoc plugin system
+#
+
+# Append to plugins with: plugins=($my_plugins $plugins)
+plugins=(prompt)
+
+[[ -f ~/.aliases ]] && source ~/.aliases
+[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
+[[ -f ~/.zshrc.host ]] && source ~/.zshrc.host
+
+should_add_to_fpath() {
+  local base_dir=$1
+  local name=$2
+  test -f $base_dir/plugins/$name/$name.zsh \
+    || test -f $base_dir/plugins/$name/_$name
+}
+
+for name ($plugins); do
+  if should_add_to_fpath $ZSH $name; then
+    fpath=($ZSH/plugins/$name $fpath)
+  fi
+  source $ZSH/plugins/$name/$name.zsh
 done
 
-# Load completiona subsystem
+
+#
+# Load completion subsystem
+#
 autoload -U compinit
 compinit
 
@@ -128,6 +145,3 @@ zstyle ':completion:*' matcher-list '' 'm:{a-z}={A-Z}' 'm:{a-z}={A-Z} r:|[._-]=*
 zstyle ':completion:*' menu select=4
 
 
-[[ -f ~/.aliases ]] && source ~/.aliases
-[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
-[[ -f ~/.zshrc.host ]] && source ~/.zshrc.host
