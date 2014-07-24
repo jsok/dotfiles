@@ -110,7 +110,7 @@ fpath=(~/.zsh/completion/zsh-users/src $fpath)
 #
 
 # Append to plugins with: plugins=($my_plugins $plugins)
-plugins=(prompt)
+plugins=(prompt base16)
 
 [[ -f ~/.aliases ]] && source ~/.aliases
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local

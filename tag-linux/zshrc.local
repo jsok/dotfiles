@@ -14,10 +14,3 @@ case $TERM in
         preexec() {	echo -n "\033]0;${USER}@${HOST}: ${PWD/$HOME/~} : $1\007"; }
         ;;
 esac
-
-
-# Base16 Shell
-BASE16_SCHEME="default"
-BASE16_SHELL="$HOME/.config/base16-shell/base16-$BASE16_SCHEME.dark.sh"
-[[ -s $BASE16_SHELL ]] && . $BASE16_SHELL
-
