@@ -1,0 +1,7 @@
+#!/bin/bash
+#
+# Name:        run-script-in-background
+# Description: takes all command-line arguments and runs them as a background command
+#
+
+$@ &
