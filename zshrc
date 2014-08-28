@@ -29,11 +29,6 @@ export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/dev
 source /usr/local/bin/virtualenvwrapper.sh
 
-# go-lang
-export GOROOT=/usr/local/go
-export PATH=$PATH:$GOROOT/bin
-source /usr/local/go/misc/zsh/go
-
 # Ruby
 export PATH=$PATH:$HOME/.rbenv/bin
 if which rbenv &>/dev/null ; then
@@ -143,5 +138,3 @@ zstyle ':completion:*' insert-unambiguous true
 zstyle ':completion:*' list-prompt %SAt %p: Hit TAB for more, or the character to insert%s
 zstyle ':completion:*' matcher-list '' 'm:{a-z}={A-Z}' 'm:{a-z}={A-Z} r:|[._-]=* r:|=*'
 zstyle ':completion:*' menu select=4
-
-
