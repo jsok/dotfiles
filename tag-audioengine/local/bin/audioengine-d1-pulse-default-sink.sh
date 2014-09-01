@@ -6,7 +6,7 @@
 
 # Create a file `/etc/udev/rules.d/91-audioengine-d1.rules
 # With the line:
-#   ACTION=="add" SUBSYSTEM=="sound" SUBSYSTEMS=="usb" ATTRS{id}=="D1" ATTRS{idVendor}=="1101", ATTRS{idProduct}=="0003", RUN+="/home/jsok/.bin/run-script-in-background /home/jsok/.bin/audioengine-d1-pulse-default-sink.sh"
+#   ACTION=="add" SUBSYSTEM=="sound" SUBSYSTEMS=="usb" ATTRS{id}=="D1" ATTRS{idVendor}=="1101", ATTRS{idProduct}=="0003", RUN+="/home/jsok/.local/bin/run-script-in-background /home/jsok/.bin/audioengine-d1-pulse-default-sink.sh"
 #
 # Reload udev rules with:
 #   udevadm control --reload-rules

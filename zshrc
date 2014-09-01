@@ -22,7 +22,7 @@ limit coredumpsize 0
 export VISUAL=vim
 export EDITOR=$VISUAL
 
-export PATH="$HOME/.bin:/usr/local/bin:/usr/local/sbin:$PATH"
+export PATH="$HOME/.local/bin:/usr/local/bin:/usr/local/sbin:$PATH"
 
 # Python
 export WORKON_HOME=$HOME/.virtualenvs

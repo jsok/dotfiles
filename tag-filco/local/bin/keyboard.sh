@@ -4,7 +4,7 @@
 #
 # Create a file `/etc/udev/rules.d/96-filco-majestouch.rules`
 # With the line:
-#   ACTION=="add" ATTRS{idVendor}=="04d9", ATTRS{idProduct}=="1818", RUN+="/home/jsok/.bin/run-script-in-background /home/jsok/.bin/keyboard.sh"
+#   ACTION=="add" ATTRS{idVendor}=="04d9", ATTRS{idProduct}=="1818", RUN+="/home/jsok/.local/bin/run-script-in-background /home/jsok/.bin/keyboard.sh"
 #
 # Reload udev rules with:
 #   udevadm control --reload-rules
