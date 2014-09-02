@@ -3,7 +3,7 @@
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 ! Scrolling prefs
-URxvt*scrollBar: true
+URxvt*scrollBar: false
 URxvt*scrollstyle: rxvt
 URxvt*scrollBar_right: true
 URxvt*scrollBar_floating: true
