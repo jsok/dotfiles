@@ -24,6 +24,7 @@ Bundle 'solarnz/thrift.vim'
 Bundle 'rodjek/vim-puppet'
 Bundle 'othree/javascript-libraries-syntax.vim'
 Bundle 'shmay/vim-yaml'
+Bundle 'lukerandall/haskellmode-vim'
 
 " Themes
 Bundle 'chriskempson/base16-vim'

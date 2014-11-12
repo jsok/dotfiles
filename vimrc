@@ -218,3 +218,11 @@ autocmd Filetype html setlocal ts=4 sts=4 sw=4
 autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
 
 let g:used_javascript_libs = 'jquery,angularjs,backbone,jasmine,underscore,requirejs'
+
+
+" ------------------------------------------------------------------------------
+" Haskell
+" ------------------------------------------------------------------------------
+au BufEnter *.hs compiler ghc
+let g:haddock_browser='google-chrome'
+autocmd Filetype haskell setlocal ts=8 sts=4 sw=4 expandtab shiftround
