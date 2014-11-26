@@ -5,6 +5,7 @@
   in = fetch --dry-run
   ci = commit
   br = branch
+  bra = branch -a
   co = checkout
   rm = remote -v
   lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
