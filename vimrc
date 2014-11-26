@@ -18,7 +18,7 @@ set noswapfile
 set notimeout                                " Fix lag in iTerm.
 set ttimeout
 set timeoutlen=50
-set nomodeline
+set modeline
 set selection=inclusive                      " Select to the end of line.
 
 set spelllang=en_au                          " Set spell check language.
