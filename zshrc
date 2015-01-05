@@ -122,7 +122,7 @@ for name ($plugins); do
   if should_add_to_fpath $ZSH $name; then
     fpath=($ZSH/plugins/$name $fpath)
   fi
-  source $ZSH/plugins/$name/$name.zsh
+  source $ZSH/plugins/$name.zsh
 done
 
 
