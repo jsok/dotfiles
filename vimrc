@@ -84,7 +84,7 @@ noremap K <Leader>k
 " ------------------------------------------------------------------------------
 " CtrlP
 " ------------------------------------------------------------------------------
-let g:ctrlp_map = '<Leader>t'
+let g:ctrlp_map = '<Leader>p'
 
 set wildignore+=*/.git/*,*.pyc
 let g:ctrlp_custom_ignore = {
@@ -195,12 +195,15 @@ let g:pymode_run = 0                                " Don't enable python run co
 let g:pymode_breakpoint = 0                         " Don't need
 let g:pymode_doc = 0                                " Don't need python documentation
 let g:pymode_lint_write = 0                         " I prefer manual linting
+noremap <leader>l :PymodeLint<cr>
 
 " ------------------------------------------------------------------------------
 " Golang
 " ------------------------------------------------------------------------------
 
 nnoremap <buffer> <silent> <Leader>k :Godoc<cr> " Godoc on leader k
+au FileType go nmap <leader>t <Plug>(go-test)
+
 
 
 " ------------------------------------------------------------------------------
