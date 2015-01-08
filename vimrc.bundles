@@ -1,13 +1,15 @@
-if &compatible
-    set nocompatible
-end
-
+set nocompatible
 filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+
+" Avoid problems for non-POSIX shell users.
+set shell=/bin/sh
+
+" Set runtime path to include vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " Self managed
-Bundle 'gmarik/vundle'
+Bundle 'gmarik/Vundle.vim'
 
 " My Bundles
 Bundle 'bling/vim-airline'
@@ -33,4 +35,5 @@ if filereadable(expand("~/.vimrc.bundles.local"))
     source ~/.vimrc.bundles.local
 endif
 
-filetype on
+call vundle#end()
+filetype plugin indent on
