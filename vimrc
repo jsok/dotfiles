@@ -232,6 +232,11 @@ autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
 
 let g:used_javascript_libs = 'jquery,angularjs,backbone,jasmine,underscore,requirejs'
 
+" ------------------------------------------------------------------------------
+" JSON
+" ------------------------------------------------------------------------------
+autocmd Filetype json setlocal ts=2 sts=2 sw=2
+let g:vim_json_syntax_conceal = 0
 
 " ------------------------------------------------------------------------------
 " Haskell

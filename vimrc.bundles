@@ -25,6 +25,7 @@ Bundle 'fatih/vim-go'
 Bundle 'solarnz/thrift.vim'
 Bundle 'rodjek/vim-puppet'
 Bundle 'othree/javascript-libraries-syntax.vim'
+Bundle 'elzr/vim-json'
 Bundle 'shmay/vim-yaml'
 Bundle 'lukerandall/haskellmode-vim'
 
