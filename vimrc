@@ -185,17 +185,27 @@ autocmd FileType gitcommit DiffGitCached | wincmd L | wincmd p     " vsplit
 " ------------------------------------------------------------------------------
 
 au FileType python setlocal colorcolumn=79 textwidth=80
+
+let g:pymode_virtualenv = 1
+
+" Linting
 let g:pymode_lint_config = '$HOME/.pylintrc'
 let g:pymode_lint_checker = 'pyflakes,pep8'
 let g:pymode_lint_ignore = 'C0301'
-let g:pymode_lint_write = 0                         " I prefer manual linting
 let g:pymode_lint_minheight = 20                    " Show me more
+let g:pymode_lint_on_fly = 0
+let g:pymode_lint_on_write = 0
+noremap <leader>l :PymodeLint<cr>
+
 let g:pymode_folding = 0                            " Folding is annoying
 let g:pymode_run = 0                                " Don't enable python run code
 let g:pymode_breakpoint = 0                         " Don't need
 let g:pymode_doc = 0                                " Don't need python documentation
-let g:pymode_lint_write = 0                         " I prefer manual linting
-noremap <leader>l :PymodeLint<cr>
+
+" Rope completion
+let g:pymode_rope_completion = 1
+let g:pymode_rope_complete_on_dot = 0
+
 
 " ------------------------------------------------------------------------------
 " Golang
