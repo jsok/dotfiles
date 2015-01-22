@@ -189,7 +189,7 @@ au FileType python setlocal colorcolumn=79 textwidth=80
 let g:pymode_virtualenv = 1
 
 " Linting
-let g:pymode_lint_config = '$HOME/.pylintrc'
+let g:pymode_lint_config = '~/.pylintrc'
 let g:pymode_lint_checker = 'pyflakes,pep8'
 let g:pymode_lint_ignore = 'C0301'
 let g:pymode_lint_minheight = 20                    " Show me more
@@ -203,8 +203,11 @@ let g:pymode_breakpoint = 0                         " Don't need
 let g:pymode_doc = 0                                " Don't need python documentation
 
 " Rope completion
+let g:pymode_rope_project_root = '~/.rope'
+let g:pymode_rope_regenerate_on_write = 0
 let g:pymode_rope_completion = 1
 let g:pymode_rope_complete_on_dot = 0
+let g:pymode_rope_goto_definition_cmd = 'vnew'
 
 
 " ------------------------------------------------------------------------------
