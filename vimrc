@@ -216,6 +216,7 @@ let g:pymode_rope_goto_definition_cmd = 'vnew'
 
 nnoremap <buffer> <silent> <Leader>k :Godoc<cr> " Godoc on leader k
 au FileType go nmap <leader>t <Plug>(go-test)
+au FileType go set nolist
 
 
 
