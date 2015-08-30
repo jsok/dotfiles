@@ -23,6 +23,9 @@ set selection=inclusive                      " Select to the end of line.
 
 set spelllang=en_au                          " Set spell check language.
 
+set splitright                               " Open vsplits on right
+set splitbelow                               " Open splits below
+
 " ------------------------------------------------------------------------------
 " Vundle
 " ------------------------------------------------------------------------------
