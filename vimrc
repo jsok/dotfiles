@@ -242,6 +242,7 @@ autocmd Filetype php setlocal synmaxcol=500  " PHP devs have no respect
 
 autocmd Filetype html setlocal ts=4 sts=4 sw=4
 autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
+au BufNewFile,BufRead *.ejs set filetype=javascript
 
 let g:used_javascript_libs = 'jquery,angularjs,backbone,jasmine,underscore,requirejs'
 
