@@ -221,14 +221,19 @@ nnoremap <buffer> <silent> <Leader>k :Godoc<cr> " Godoc on leader k
 au FileType go nmap <leader>t <Plug>(go-test)
 au FileType go set nolist
 
-
-
 " ------------------------------------------------------------------------------
 " Ruby & Puppet
 " ------------------------------------------------------------------------------
 
 autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
 autocmd Filetype puppet setlocal ts=2 sts=2 sw=2
+
+" ------------------------------------------------------------------------------
+" PHP (send help)
+" ------------------------------------------------------------------------------
+
+autocmd Filetype php setlocal iskeyword-=$
+autocmd Filetype php setlocal synmaxcol=500  " PHP devs have no respect
 
 " ------------------------------------------------------------------------------
 " Javascript & HTML
