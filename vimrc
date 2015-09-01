@@ -141,6 +141,7 @@ syntax on                         " Enable syntax highlighting.
 filetype on                       " Detect file type.
 filetype indent on                " Enable file indenting.
 filetype plugin indent on         " Load syntax files for better indenting.
+set synmaxcol=120                 " Limit to improve performance
 
 " ------------------------------------------------------------------------------
 " User Interface
