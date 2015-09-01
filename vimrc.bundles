@@ -28,6 +28,7 @@ Bundle 'othree/javascript-libraries-syntax.vim'
 Bundle 'elzr/vim-json'
 Bundle 'shmay/vim-yaml'
 Bundle 'lukerandall/haskellmode-vim'
+Bundle 'markcornick/vim-bats'
 
 " Themes
 Bundle 'chriskempson/base16-vim'
