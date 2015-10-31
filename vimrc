@@ -258,3 +258,6 @@ let g:vim_json_syntax_conceal = 0
 au BufEnter *.hs compiler ghc
 let g:haddock_browser='google-chrome'
 autocmd Filetype haskell setlocal ts=8 sts=4 sw=4 expandtab shiftround
+
+" Filetype hints
+au BufRead,BufNewFile nginx*.conf set ft=nginx
