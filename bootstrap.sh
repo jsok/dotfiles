@@ -2,18 +2,21 @@
 
 echo "=> Installing Homebrew..."
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+brew update >/dev/null
 
 echo "=> Installing RCM..."
 brew tap thoughtbot/formulae
 brew install rcm
 
-echo "=> Bootstrapping OS X environment..."
-# Install only OS X dotfiles and skip hooks
-env RCRC=tag-osx/rcrc rcup -K -t osx
+echo "=> Bootstrapping RCM..."
+# Apply without hooks
+env RCRC="./tag-osx/rcrc" rcup -f -K -v -t osx
 
 echo "=> Applying RCM configuration..."
-rcup
+rcup -f -v
 
-echo "=> Finished installing dotfiles."
+echo "=> Finished installing dotfiles:"
+lsrc
+
 echo ""
-echo "=> Please set HOSTNAME in ~/.rcrc"
+echo "=> NOTE: Please set HOSTNAME in ~/.rcrc"
