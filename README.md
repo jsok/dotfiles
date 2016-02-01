@@ -17,7 +17,8 @@ Create a `$HOME/.rcrc` with something like:
 EXCLUDES="README.md LICENSE"
 DOTFILES_DIRS="$HOME/.dotfiles-work $HOME/.dotfiles"
 HOSTNAME="scribbly"
-TAGS="osx github"
+TAGS="osx github iterm2"
+UNDOTTED="Library"
 ```
 
 Make it happen
