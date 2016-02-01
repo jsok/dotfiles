@@ -1,0 +1,23 @@
+# Aliases
+
+alias tmux="tmux -2"
+alias l="ls -1"
+alias rm="rm"
+alias mv="mv -i"
+alias cp="cp -i"
+alias ll="ls -l"
+alias la="ls -A"
+alias lll="ls -lhA"
+alias vi="vim"
+alias cls="clear"
+alias cdd="cd .."
+alias usage="du -h -d 1"
+alias lockscreen="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
+
+# Common typos
+alias ci="vim"
+alias grpe="grep"
+alias got="git"
+alias gis="git status"
+alias gid="git diff"
+alias gic="git commit -m"

@@ -9,12 +9,3 @@ if [[ $TERM_PROGRAM == "Apple_Terminal" ]] && [[ -z "$INSIDE_EMACS" ]] {
 
     chpwd
 }
-
-alias tmux="tmux -2"
-alias ll="ls -al"
-alias cdd="cd .."
-alias cls="clear"
-alias vi="vim"
-alias cdd="cd ../"
-alias usage="du -h -d 1"
-alias lockscreen="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
