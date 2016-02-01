@@ -2,37 +2,37 @@ set nocompatible
 filetype off
 
 " Avoid problems for non-POSIX shell users.
-set shell=/bin/sh
+" set shell=/bin/sh
 
 " Set runtime path to include vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " Self managed
-Bundle 'gmarik/Vundle.vim'
+Plugin 'VundleVim/Vundle.vim'
 
 " My Bundles
-Bundle 'bling/vim-airline'
-Bundle 'elzr/vim-json'
-Bundle 'evanmiller/nginx-vim-syntax'
-Bundle 'fatih/vim-go'
-Bundle 'godlygeek/tabular'
-Bundle 'henrik/rename.vim'
-Bundle 'kien/ctrlp.vim'
-Bundle 'klen/python-mode.git'
-Bundle 'lukerandall/haskellmode-vim'
-Bundle 'markcornick/vim-bats'
-Bundle 'mileszs/ack.vim'
-Bundle 'mustache/vim-mustache-handlebars'
-Bundle 'othree/javascript-libraries-syntax.vim'
-Bundle 'rodjek/vim-puppet'
-Bundle 'shmay/vim-yaml'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-git'
-Bundle 'tpope/vim-markdown'
+Plugin 'bling/vim-airline'
+Plugin 'elzr/vim-json'
+Plugin 'evanmiller/nginx-vim-syntax'
+Plugin 'fatih/vim-go'
+Plugin 'godlygeek/tabular'
+Plugin 'henrik/rename.vim'
+Plugin 'kien/ctrlp.vim'
+Plugin 'klen/python-mode.git'
+Plugin 'lukerandall/haskellmode-vim'
+Plugin 'markcornick/vim-bats'
+Plugin 'mileszs/ack.vim'
+Plugin 'mustache/vim-mustache-handlebars'
+Plugin 'othree/javascript-libraries-syntax.vim'
+Plugin 'rodjek/vim-puppet'
+Plugin 'shmay/vim-yaml'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-git'
+Plugin 'tpope/vim-markdown'
 
 " Themes
-Bundle 'chriskempson/base16-vim'
+Plugin 'chriskempson/base16-vim'
 
 if filereadable(expand("~/.vimrc.bundles.local"))
     source ~/.vimrc.bundles.local
