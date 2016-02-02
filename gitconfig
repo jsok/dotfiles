@@ -22,10 +22,6 @@
   autosetupmerge = true
 [push]
   default = tracking
-
-[url "ssh://git@github.com/"]
-    insteadOf = https://github.com/
-# Requires git ~= 1.8 or newer
 [include]
   path = .gitconfig.local
 [help]
