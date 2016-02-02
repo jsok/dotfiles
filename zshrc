@@ -24,21 +24,6 @@ export EDITOR=$VISUAL
 
 export PATH="$HOME/.local/bin:/usr/local/bin:/usr/local/sbin:$PATH"
 
-# Python
-export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/dev
-source /usr/local/bin/virtualenvwrapper.sh
-
-# Ruby
-export PATH=$PATH:$HOME/.rbenv/bin
-if which rbenv &>/dev/null ; then
-    eval "$(rbenv init - --no-rehash)"
-fi
-
-# NodeJS / NPM
-[ -s "/home/jsok/.nvm/nvm.sh" ] && . "/home/jsok/.nvm/nvm.sh" # This loads nvm
-
-
 # Colour support all round
 autoload -U colors
 colors
