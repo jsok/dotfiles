@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>MigrationUtilitiesCurrentBundleIdentifer</key>
+	<string>org.pqrs.Karabiner</string>
+	<key>NSWindow Frame SUStatusFrame</key>
+	<string>791 1129 400 129 0 0 2560 1417 </string>
+	<key>NSWindow Frame SUUpdateAlert</key>
+	<string>410 364 620 392 0 0 1440 877 </string>
+	<key>SUFeedURL</key>
+	<string>https://pqrs.org/osx/karabiner/files/appcast.xml</string>
+	<key>SUHasLaunchedBefore</key>
+	<true/>
+	<key>SULastCheckTime</key>
+	<date>2016-02-02T11:31:30Z</date>
+	<key>configList</key>
+	<array>
+		<dict>
+			<key>appendIndex</key>
+			<integer>1</integer>
+			<key>identify</key>
+			<string>config_1420240955_451705</string>
+			<key>name</key>
+			<string>Default</string>
+		</dict>
+	</array>
+	<key>config_1420240955_451705</key>
+	<dict>
+		<key>general.dont_remap_internal</key>
+		<integer>1</integer>
+		<key>notsave.automatically_enable_keyboard_device</key>
+		<integer>1</integer>
+		<key>notsave.automatically_enable_pointing_device</key>
+		<integer>1</integer>
+		<key>remap.pc_fkeys12brightnesscontrols</key>
+		<integer>1</integer>
+		<key>remap.pc_fkeys5672musiccontrols</key>
+		<integer>1</integer>
+		<key>remap.pc_functionblock2volumecontrols</key>
+		<integer>1</integer>
+		<key>repeat.initial_wait</key>
+		<integer>250</integer>
+		<key>repeat.wait</key>
+		<integer>25</integer>
+	</dict>
+	<key>kIsAXNotifierEnabled</key>
+	<false/>
+	<key>kIsMigratedOverwriteKeyRepeat</key>
+	<true/>
+	<key>kIsOverwriteKeyRepeat</key>
+	<true/>
+</dict>
+</plist>

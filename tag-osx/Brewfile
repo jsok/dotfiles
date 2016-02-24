@@ -26,6 +26,7 @@ brew 'wget'
 brew 'zsh'
 cask 'google-chrome'
 cask 'iterm2'
+cask 'karabiner'
 cask 'vagrant'
 cask 'virtualbox'
 
