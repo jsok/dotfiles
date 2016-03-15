@@ -1,3 +1,9 @@
+function docker_machine_use() {
+    eval $(docker-machine env "$*")
+}
+
 if [ -n "$DOCKER_MACHINE_DEFAULT" ]; then
-    eval $(docker-machine env $DOCKER_MACHINE_DEFAULT)
+    docker_machine_use $DOCKER_MACHINE_DEFAULT
 fi
+
+alias dmu=docker_machine_use
