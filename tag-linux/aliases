@@ -13,6 +13,7 @@ alias vi="vim"
 alias cls="echo -ne '\033c'"
 alias cdd="cd ../"
 alias usage="du -h -d 1"
+alias be="bundle exec"
 alias exifstripgps="exiftool -overwrite_original -Geotag="
 
 # Common typos
