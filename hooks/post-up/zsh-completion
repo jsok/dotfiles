@@ -1,9 +1,0 @@
-#!/bin/sh
-
-if [ ! -e $HOME/.zsh/completion ]; then
-  mkdir -p $HOME/.zsh/completion
-fi
-
-if [ ! -e $HOME/.zsh/completion/zsh-users ]; then
-  git clone https://github.com/zsh-users/zsh-completions.git $HOME/.zsh/completion/zsh-users
-fi

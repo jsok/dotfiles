@@ -82,15 +82,12 @@ bindkey '\e[5~' end-of-history
 bindkey '\e\e[D' backward-word
 bindkey '\e\e[C' forward-word
 
-# load our own completion functions
-fpath=(~/.zsh/completion/zsh-users/src $fpath)
-
 #
 # Ad-hoc plugin system
 #
 
 # Append to plugins with: plugins=($my_plugins $plugins)
-plugins=(prompt base16)
+plugins=(completions prompt base16)
 
 [[ -f ~/.aliases ]] && source ~/.aliases
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
