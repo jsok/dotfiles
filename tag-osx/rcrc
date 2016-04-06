@@ -1,4 +1,4 @@
-TAGS="osx github iterm2 karabiner"
+TAGS="osx github iterm2"
 DOTFILES_DIRS="$HOME/.dotfiles"
 EXCLUDES="LICENSE README.md bootstrap.sh .travis.yml"
 UNDOTTED="Library"
