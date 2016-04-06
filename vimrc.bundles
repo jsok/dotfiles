@@ -13,6 +13,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 " My Bundles
 Plugin 'bling/vim-airline'
+Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'elzr/vim-json'
 Plugin 'evanmiller/nginx-vim-syntax'
