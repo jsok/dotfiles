@@ -13,6 +13,7 @@ alias cls="clear"
 alias cdd="cd .."
 alias usage="du -h -d 1"
 alias be="bundle exec"
+alias tf="terraform"
 
 alias lockscreen="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
 
