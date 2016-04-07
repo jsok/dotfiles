@@ -3,6 +3,7 @@ tap 'homebrew/bundle'
 
 tap 'caskroom/cask'
 tap 'homebrew/dupes'
+tap 'homebrew/services'
 
 brew 'direnv'
 brew 'dos2unix'
