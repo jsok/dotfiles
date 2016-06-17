@@ -11,22 +11,24 @@
   lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
   unstage = reset HEAD
   squash = rebase -i --autosquash
-[core]
-  excludesfile = ~/.gitignore
+[branch]
+  autosetupmerge = true
 [color]
   diff = auto
   status = auto
   branch = auto
   ui = auto
-[branch]
-  autosetupmerge = true
-[push]
-  default = tracking
+[core]
+  excludesfile = ~/.gitignore
+[diff]
+  compactionHeuristic = true
+[help]
+  autocorrect = 1
 [include]
   path = .gitconfig.local
-[help]
-    autocorrect = 1
+[push]
+  default = tracking
 [remote]
-	prune = true
+  prune = true
 [user]
-	signingkey = 9A8427C59817BEAB
+  signingkey = 9A8427C59817BEAB
