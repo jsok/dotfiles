@@ -5,7 +5,7 @@
 tmux_title() {
     if [[ "$TMUX" != "" ]]; then
         TMUX_TITLE=""
-        if git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
+        if [ git rev-parse --is-inside-work-tree >/dev/null 2>&1 == "true" ]; then
             TMUX_TITLE=$(basename `git rev-parse --show-toplevel`)
         else
             TMUX_TITLE=$(basename `pwd`)
