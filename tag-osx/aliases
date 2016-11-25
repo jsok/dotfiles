@@ -16,6 +16,7 @@ alias be="bundle exec"
 alias tf="terraform"
 
 alias lockscreen="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
+alias hogs="top -o cpu -l2 -n5 -stats pid,command,cpu"
 
 # Common typos
 alias ci="vim"
