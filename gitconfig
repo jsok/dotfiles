@@ -4,6 +4,7 @@
   out = diff --cached
   in = fetch --dry-run
   ci = commit
+  fixup = commit --fixup
   br = branch
   bra = branch -a
   co = checkout
