@@ -78,6 +78,9 @@ vnoremap > >gv
 " Save files with sudo
 cmap w!! %!sudo tee > /dev/null %
 
+" Dash App
+:nmap <silent> <leader>d <Plug>DashSearch
+
 " Run PyLint
 noremap <Leader>l :PyLint<CR>
 
