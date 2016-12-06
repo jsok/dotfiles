@@ -34,5 +34,7 @@
   default = tracking
 [remote]
   prune = true
+[fetch]
+  prune = true
 [user]
   signingkey = 9A8427C59817BEAB
