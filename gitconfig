@@ -1,7 +1,7 @@
 [alias]
   st = status
   di = diff
-  out = diff --cached
+  out = diff --cached --submodule
   in = fetch --dry-run
   ci = commit
   fixup = commit --fixup
@@ -26,6 +26,7 @@
   excludesfile = ~/.gitignore
 [diff]
   compactionHeuristic = true
+  submodule = log
 [help]
   autocorrect = 1
 [include]
