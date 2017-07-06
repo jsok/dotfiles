@@ -24,6 +24,7 @@
   ui = auto
 [core]
   excludesfile = ~/.gitignore
+  filemode = true
 [diff]
   compactionHeuristic = true
   submodule = log
