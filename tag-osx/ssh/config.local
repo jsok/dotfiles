@@ -1,0 +1,5 @@
+# macOS Sierra uses KeyChain.app to store SSH key passwords
+Host *
+    IdentityFile ~/.ssh/id_rsa
+    AddKeysToAgent yes
+    UseKeychain yes
