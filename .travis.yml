@@ -1,3 +1,4 @@
 os: osx
+osx_image: xcode9
 install: cp -R $TRAVIS_BUILD_DIR $HOME/.dotfiles
 script: ./bootstrap.sh
