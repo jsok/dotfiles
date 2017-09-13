@@ -1,3 +1,4 @@
+# Deprecated: Use tmux automatic-rename-format instead
 # Sets the current tmux window title to either:
 #  * the git repo name
 #  * the current directory name
