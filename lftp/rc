@@ -1,4 +1,5 @@
 alias jls cls -l -h -I -t -r
 alias rejls recls -l -h -I -t -r
-set mirror:use-pget-n 3
-set pget:default-n 3
+alias globget mirror --no-recursion -i
+set mirror:use-pget-n 6
+set pget:default-n 6
