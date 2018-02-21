@@ -165,7 +165,7 @@ endif
 " ------------------------------------------------------------------------------
 set t_Co=256                      " Make vim aware of 256 colorspace
 let base16colorspace=256          " Enable base16 256 colorspace
-colorscheme base16-default
+colorscheme base16-default-dark
 set background=dark
 highlight ColorColumn ctermbg=236 guibg=#262D51
 
