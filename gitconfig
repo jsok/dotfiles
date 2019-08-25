@@ -43,3 +43,5 @@
   prune = true
 [fetch]
   prune = true
+[credential]
+  helper = osxkeychain
