@@ -1,6 +1,7 @@
 # Aliases
 
 alias tmux="tmux -2"
+alias k="kubectl"
 alias l="ls -1"
 alias rm="rm"
 alias mv="mv -i"
@@ -15,6 +16,7 @@ alias cdroot='cd $(git root)'
 alias usage="du -h -d 1"
 alias be="bundle exec"
 alias tf="terraform"
+alias kustomize="kubectl kustomize"
 
 alias lockscreen="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
 alias hogs="top -o cpu -l2 -n5 -stats pid,command,cpu"
