@@ -12,14 +12,14 @@
   lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
   unstage = reset HEAD
   squash = rebase -i --autosquash
-  repo = !hub browse
+  repo = !gh repo view --web
   browse = "!hub browse -- blob/$(git rev-parse HEAD)/\"$1\" #"
-  pull-request = !hub pull-request
-  prs = !hub browse -- pulls
-  issues = !hub browse -- issues
+  prs = !gh pr list --web
+  issues = !gh issue list --web
   pages = !open $(gh-pages-url)
-  jenkins = !open $(jenkins-url)
+  jenkins = "!gh api repos/:owner/:repo/statuses/:branch | jq -r '.[0].target_url' | xargs open"
   root = rev-parse --show-toplevel
+  close-branch = git-close-branch
 [branch]
   autosetupmerge = true
 [color]
@@ -32,11 +32,14 @@
   filemode = true
 [diff]
   compactionHeuristic = true
+  noprefix = true
   submodule = log
 [help]
   autocorrect = 1
 [include]
   path = .gitconfig.local
+[pull]
+  ff = only
 [push]
   default = tracking
 [remote]
