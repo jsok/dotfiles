@@ -1,5 +1,0 @@
-#!/bin/zsh
-
-if [ "$(uname -s)" = "Darwin" ]; then
-    brew bundle --global
-fi

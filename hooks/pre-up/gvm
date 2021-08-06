@@ -1,3 +1,0 @@
-#!/bin/zsh
-
-[[ ! -d "$HOME/.gvm" ]] && GVM_NO_UPDATE_PROFILE=1 GVM_NO_GIT_BAK=1 zsh < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
