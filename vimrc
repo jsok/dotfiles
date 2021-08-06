@@ -87,22 +87,34 @@ noremap <Leader>l :PyLint<CR>
 " Man pages always trigger by accident, make it harder
 noremap K <Leader>k
 
+
+" ------------------------------------------------------------------------------
+" Ag - silver searcher
+" ------------------------------------------------------------------------------
+let g:ag_working_path_mode="r"
+
+" ------------------------------------------------------------------------------
+" fzf
+" ------------------------------------------------------------------------------
+" Maintain ctrl-p muscle memory
+nmap <leader>p :FZF<CR>
+
 " ------------------------------------------------------------------------------
 " CtrlP
 " ------------------------------------------------------------------------------
-let g:ctrlp_map = '<Leader>p'
-
-set wildignore+=*/.git/*,*.pyc
-let g:ctrlp_custom_ignore = {
- \ 'dir':  '\v[\/]\.(git|hg|svn)$',
- \ }
-
-let g:ctrlp_user_command = {
- \ 'types': {
- \ 1: ['.git', 'cd %s && git ls-files --cached --exclude-standard --others'],
- \ },
- \ 'fallback': 'find %s -type f'
- \ }
+"let g:ctrlp_map = '<Leader>p'
+"
+"set wildignore+=*/.git/*,*.pyc
+"let g:ctrlp_custom_ignore = {
+" \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+" \ }
+"
+"let g:ctrlp_user_command = {
+" \ 'types': {
+" \ 1: ['.git', 'cd %s && git ls-files --cached --exclude-standard --others'],
+" \ },
+" \ 'fallback': 'find %s -type f'
+" \ }
 
 " ------------------------------------------------------------------------------
 " Search and Replace
@@ -157,7 +169,11 @@ if has('mouse')
     set mouse=a                   " Enable mouse everywhere.
     set mousemodel=popup_setpos   " Show a pop-up for right-click.
     set mousehide                 " Hide mouse while typing.
-    set ttymouse=xterm2           " Enables split resizing in tmux
+    if has("mouse_sgr")
+        set ttymouse=sgr          " Mouse works in columns beyond 223
+    else
+        set ttymouse=xterm2
+    end
 endif
 
 " ------------------------------------------------------------------------------
@@ -256,6 +272,11 @@ autocmd Filetype json setlocal ts=2 sts=2 sw=2
 let g:vim_json_syntax_conceal = 0
 
 " ------------------------------------------------------------------------------
+" YAML
+" ------------------------------------------------------------------------------
+autocmd FileType yml,yaml setlocal ts=2 sts=2 sw=2 expandtab iskeyword+=-
+
+" ------------------------------------------------------------------------------
 " Haskell
 " ------------------------------------------------------------------------------
 au BufEnter *.hs compiler ghc
@@ -264,3 +285,8 @@ autocmd Filetype haskell setlocal ts=8 sts=4 sw=4 expandtab shiftround
 
 " Filetype hints
 au BufRead,BufNewFile nginx*.conf set ft=nginx
+
+" ------------------------------------------------------------------------------
+" Terraform
+" ------------------------------------------------------------------------------
+let g:terraform_fmt_on_save=1
