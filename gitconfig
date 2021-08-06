@@ -17,8 +17,6 @@
   browse = "!hub browse -- blob/$(git rev-parse HEAD)/\"$1\" #"
   prs = !gh pr list --web
   issues = !gh issue list --web
-  pages = !open $(gh-pages-url)
-  jenkins = "!gh api repos/:owner/:repo/statuses/:branch | jq -r '.[0].target_url' | xargs open"
   root = rev-parse --show-toplevel
   close-branch = git-close-branch
 [branch]
