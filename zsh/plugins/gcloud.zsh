@@ -1,7 +1,8 @@
 # Google Cloud SDK
 
-source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc
-source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
+BREW_PREFIX=$(brew --prefix)
+source $BREW_PREFIX/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc
+source $BREW_PREFIX/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
 
 gcp(){
     local readonly g=( "gcloud" "config" "configurations" )
