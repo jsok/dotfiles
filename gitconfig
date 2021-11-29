@@ -5,20 +5,20 @@
   in = fetch --dry-run
   ff = pull --ff-only
   ci = commit
-  fixup = commit --fixup
+  fixup = "!git log --oneline | fzf --layout=reverse --ansi | cut -d ' ' -f1 | xargs git commit --fixup"
   br = branch
   bra = branch -a
   co = checkout
-  rm = remote -v
   lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cs %cr) %C(bold blue)<%an>%Creset' --abbrev-commit
   unstage = reset HEAD
   squash = rebase -i --autosquash
-  repo = !gh repo view --web
   browse = "!hub browse -- blob/$(git rev-parse HEAD)/\"$1\" #"
+  repo = !gh repo view --web
   prs = !gh pr list --web
   issues = !gh issue list --web
   root = rev-parse --show-toplevel
   close-branch = git-close-branch
+  meld = "!git add -p && git diff --quiet --exit-code && git commit --amend --no-edit && git push -f"
 [branch]
   autosetupmerge = true
 [color]
