@@ -22,8 +22,6 @@ limit coredumpsize 0
 export VISUAL=vim
 export EDITOR=$VISUAL
 
-export PATH="$HOME/.local/bin:/usr/local/bin:/usr/local/sbin:$PATH"
-
 # Colour support all round
 autoload -U colors
 colors
@@ -87,7 +85,7 @@ bindkey '\e\e[C' forward-word
 #
 
 # Append to plugins with: plugins=($my_plugins $plugins)
-plugins=(completions prompt base16)
+plugins=(homebrew completions prompt base16)
 
 [[ -f ~/.aliases ]] && source ~/.aliases
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
