@@ -1,6 +1,3 @@
-" ------------------------------------------------------------------------------
-" General Settings
-
 command! W :w                                " Seriously, it's not like :W is bound
                                              " to anything anyway.
 set nocompatible                             " Turn off vi compatibility.
@@ -25,6 +22,7 @@ set spelllang=en_au                          " Set spell check language.
 
 set splitright                               " Open vsplits on right
 set splitbelow                               " Open splits below
+set switchbuf=vsplit                         " Quickfix and location list open in vsplit
 
 " ------------------------------------------------------------------------------
 " Vundle
@@ -98,6 +96,7 @@ let g:ag_working_path_mode="r"
 " ------------------------------------------------------------------------------
 " Maintain ctrl-p muscle memory
 nmap <leader>p :FZF<CR>
+let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
 
 " ------------------------------------------------------------------------------
 " CtrlP
@@ -204,6 +203,13 @@ autocmd FileType gitcommit DiffGitCached | wincmd L | wincmd p     " vsplit
 "autocmd FileType gitcommit DiffGitCached | wincmd p               " hsplit
 
 " ------------------------------------------------------------------------------
+" Autocompletiong via omnifunc
+" ------------------------------------------------------------------------------
+
+filetype plugin on
+set omnifunc=syntaxcomplete#Complete
+
+" ------------------------------------------------------------------------------
 " Python Mode
 " ------------------------------------------------------------------------------
 
@@ -237,8 +243,19 @@ let g:pymode_rope_goto_definition_cmd = 'vnew'
 " Golang
 " ------------------------------------------------------------------------------
 
-nnoremap <buffer> <silent> <Leader>k :Godoc<cr> " Godoc on leader k
-au FileType go nmap <leader>t <Plug>(go-test)
+" Auto formatting and importing
+let g:go_fmt_autosave = 1
+let g:go_fmt_command = "goimports"
+
+" Status line types/signatures
+let g:go_auto_type_info = 1
+
+" ctrl + space for autocomplete
+inoremap <C-Space> <C-x><C-o>
+inoremap <C-@> <C-Space>
+imap <C-Space> <C-x><C-o>
+imap <C-@> <C-Space>
+au FileType go nmap <leader>d <Plug>(go-def-vertical)
 au FileType go set nolist
 
 " ------------------------------------------------------------------------------
@@ -290,3 +307,8 @@ au BufRead,BufNewFile nginx*.conf set ft=nginx
 " Terraform
 " ------------------------------------------------------------------------------
 let g:terraform_fmt_on_save=1
+
+" ------------------------------------------------------------------------------
+" Markdown
+" ------------------------------------------------------------------------------
+let g:markdown_syntax_conceal = 0

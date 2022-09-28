@@ -1,4 +1,5 @@
 [alias]
+  ap = add -p
   st = status
   di = diff
   out = diff --cached --submodule
@@ -14,11 +15,15 @@
   squash = rebase -i --autosquash
   browse = "!hub browse -- blob/$(git rev-parse HEAD)/\"$1\" #"
   repo = !gh repo view --web
+  pr = !gh pr view --web
   prs = !gh pr list --web
   issues = !gh issue list --web
   root = rev-parse --show-toplevel
   close-branch = git-close-branch
+  reset-dir = clean -d -f -x
   meld = "!git add -p && git diff --quiet --exit-code && git commit --amend --no-edit && git push -f"
+  gerrit = push origin HEAD:refs/for/master
+  jira-branch = "!jira list -q 'status not IN (closed) AND project = SAJARI AND assignee = currentUser()' | fzf | cut -d ':' -f1 | xargs git checkout -b"
 [branch]
   autosetupmerge = true
 [color]
@@ -49,3 +54,8 @@
   helper = osxkeychain
 [init]
   defaultBranch = main
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

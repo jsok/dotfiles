@@ -9,3 +9,5 @@ if [[ $TERM_PROGRAM == "Apple_Terminal" ]] && [[ -z "$INSIDE_EMACS" ]] {
 
     chpwd
 }
+
+export PATH="${HOME}/.local/bin:${PATH}"
