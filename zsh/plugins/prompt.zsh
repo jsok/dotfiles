@@ -1,11 +1,11 @@
 # Customised prompt with git info
 
-git_prompt_info() {
-  ref=$(git symbolic-ref HEAD 2> /dev/null)
-  if [[ -n $ref ]]; then
-    echo " %{$fg_bold[green]%}${ref#refs/heads/}%{$reset_color%}"
-  fi
-}
-setopt promptsubst
-export PS1='${SSH_CONNECTION+"%{$fg_bold[green]%}%n@%M:"}%{$fg_bold[blue]%}%n@%M%{$reset_color%}$(git_prompt_info) %~> '
+autoload -Uz vcs_info
+precmd() { vcs_info }
+zstyle ':vcs_info:*' enable git
 
+# Just show the current branch name
+zstyle ':vcs_info:git*' formats '%b '
+
+setopt PROMPT_SUBST
+PROMPT='${SSH_CONNECTION+"%{$fg_bold[green]%}%n@%M:"}%{$fg_bold[green]%}${vcs_info_msg_0_}%{$reset_color%}%~> '
