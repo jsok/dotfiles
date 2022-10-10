@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+set -eu
+
+CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
+DEFAULT_BRANCH=$(gh api 'repos/{owner}/{repo}' --template '{{.default_branch}}')
+
+if [ "$DEFAULT_BRANCH" == "$CURRENT_BRANCH" ]; then
+    exit 0
+fi
+
+git fetch -f origin "$DEFAULT_BRANCH:$DEFAULT_BRANCH"
+git checkout "$DEFAULT_BRANCH"
+git branch -D "$CURRENT_BRANCH"

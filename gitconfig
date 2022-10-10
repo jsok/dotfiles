@@ -21,8 +21,7 @@
   root = rev-parse --show-toplevel
   close-branch = git-close-branch
   reset-dir = clean -d -f -x
-  meld = "!git add -p && git diff --quiet --exit-code && git commit --amend --no-edit && git push -f"
-  gerrit = push origin HEAD:refs/for/master
+  meld = git-meld
   jira-branch = "!jira list -q 'status not IN (closed) AND project = SAJARI AND assignee = currentUser()' | fzf | cut -d ':' -f1 | xargs git checkout -b"
 [branch]
   autosetupmerge = true

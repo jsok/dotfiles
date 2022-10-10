@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
+DEFAULT_BRANCH=$(gh api 'repos/{owner}/{repo}' --template '{{.default_branch}}')
+
+if [ "$DEFAULT_BRANCH" == "$CURRENT_BRANCH" ]; then
+    exit 0
+fi
+
+git fetch origin "$DEFAULT_BRANCH"
+git rebase "origin/$DEFAULT_BRANCH"

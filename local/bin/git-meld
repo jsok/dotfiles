@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# Git porcelain for staging and ammending changes to the parent commit, aka "meld"
+
+set -euo pipefail
+
+git add -p
+if !git diff --cached --quiet; then
+    echo "Nothing changes to meld"
+    exit 0
+fi
+git commit --amend --no-edit
+git push -f
