@@ -9,4 +9,4 @@ if [ "$DEFAULT_BRANCH" == "$CURRENT_BRANCH" ]; then
 fi
 
 git fetch origin "$DEFAULT_BRANCH"
-git rebase "origin/$DEFAULT_BRANCH"
+git rebase --autostash "origin/$DEFAULT_BRANCH"
