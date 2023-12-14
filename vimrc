@@ -24,6 +24,9 @@ set splitright                               " Open vsplits on right
 set splitbelow                               " Open splits below
 set switchbuf=vsplit                         " Quickfix and location list open in vsplit
 
+set exrc                                     " execute per-project vimrc files
+set secure                                   " make exrc safer
+
 " ------------------------------------------------------------------------------
 " Vundle
 " ------------------------------------------------------------------------------
