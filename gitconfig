@@ -13,11 +13,11 @@
   lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cs %cr) %C(bold blue)<%an>%Creset' --abbrev-commit
   unstage = reset HEAD
   squash = rebase -i --autosquash
-  browse = "!hub browse -- blob/$(git rev-parse HEAD)/\"$1\" #"
-  repo = !gh repo view --web
-  pr = !gh pr view --web
-  prs = !gh pr list --web
-  issues = !gh issue list --web
+  actions = "gh browse -n | xargs -I {} open '{}/actions'"
+  repo = !"gh repo view --web"
+  pr = !"gh pr view --web"
+  prs = !"gh pr list --web"
+  issues = !"gh issue list --web"
   root = rev-parse --show-toplevel
   close-branch = git-close-branch
   reset-dir = clean -d -f -x
@@ -45,6 +45,7 @@
   ff = only
 [push]
   default = tracking
+  autoSetupRemote = true
 [remote]
   prune = true
 [fetch]
