@@ -80,6 +80,26 @@ bindkey '\e[5~' end-of-history
 bindkey '\e\e[D' backward-word
 bindkey '\e\e[C' forward-word
 
+
+#
+# VCS info
+#
+
+autoload -Uz vcs_info
+precmd() { vcs_info }
+zstyle ':vcs_info:*' enable git
+
+zstyle ':vcs_info:*' max-exports 2
+# vcs_info_msg_0_ is the current branch name (used by prompt)
+# vcs_info_msg_1_ is the repository root directory name (used by tmux)
+zstyle ':vcs_info:git*' formats '%b ' '%r'
+
+#
+# Load completion subsystem
+#
+autoload -Uz compinit
+compinit
+
 #
 # Ad-hoc plugin system
 #
@@ -99,18 +119,12 @@ should_add_to_fpath() {
 }
 
 for name ($plugins); do
+  echo "Loading plugin: $name"
   if should_add_to_fpath $ZSH $name; then
     fpath=($ZSH/plugins/$name $fpath)
   fi
   source $ZSH/plugins/$name.zsh
 done
-
-
-#
-# Load completion subsystem
-#
-autoload -U compinit
-compinit
 
 zstyle ':completion:*' completer _expand _complete _history
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
