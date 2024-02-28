@@ -1,0 +1,1 @@
+/Users/jonathansokolowski/.dotfiles/dotfiles/zsh/plugins/asdf.zsh
